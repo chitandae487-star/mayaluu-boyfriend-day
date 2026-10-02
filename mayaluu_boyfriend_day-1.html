@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Mayaluu ❤️</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; font-family:"Trebuchet MS",Arial,sans-serif; color:#fff;
+  background:radial-gradient(circle at 50% 10%,#3b214b 0,#130f20 42%,#070711 100%);
+  overflow-x:hidden;
+}
+body:before{
+  content:""; position:fixed; inset:0; pointer-events:none; opacity:.35;
+  background-image:radial-gradient(#fff 1px,transparent 1px);
+  background-size:55px 55px;
+}
+.hidden{display:none!important}
+.page{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px 18px}
+.card{
+  width:min(920px,94vw); border:1px solid rgba(255,180,225,.35);
+  background:rgba(15,10,25,.72); backdrop-filter:blur(12px);
+  border-radius:28px; box-shadow:0 20px 70px rgba(0,0,0,.45);
+}
+.lock{text-align:center;padding:48px 24px}
+.lock .heart{font-size:70px;animation:pulse 1.7s infinite}
+h1,h2{font-weight:700;margin:12px 0;color:#ffd2ed}
+h1{font-size:clamp(2rem,7vw,4rem)}
+h2{font-size:clamp(1.8rem,5vw,3rem)}
+p{line-height:1.75;color:#f5e7f1}
+input{
+  width:min(300px,85vw); padding:15px 18px; border-radius:16px;
+  border:1px solid #ff9fd2; background:#120d1d; color:#fff;
+  text-align:center; font-size:1.2rem; outline:none;
+}
+button{
+  margin-top:14px; padding:13px 24px; border:0; border-radius:999px;
+  background:linear-gradient(90deg,#ff76ba,#ffb5dc); color:#281122;
+  font-weight:800; cursor:pointer; font-size:1rem;
+  box-shadow:0 8px 25px rgba(255,90,170,.25);
+}
+.error{color:#ff9bcf;min-height:25px}
+.section{padding:55px 28px}
+.center{text-align:center}
+.letter{
+  background:rgba(255,236,247,.08); border-radius:22px; padding:28px;
+  border:1px solid rgba(255,180,225,.22)
+}
+.stamp{font-size:1.05rem;color:#ffafd6;letter-spacing:2px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:15px;margin-top:25px}
+.item{
+  padding:22px 15px; border-radius:20px; background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,170,220,.22); text-align:center;
+  transform:translateY(20px);opacity:0;transition:.7s;
+}
+.item.show{transform:none;opacity:1}
+.item .icon{font-size:42px}
+.item b{display:block;color:#ffd0e8;margin:10px 0}
+.map{
+  margin-top:25px;padding:28px;border-radius:24px;
+  background:linear-gradient(135deg,rgba(255,105,180,.12),rgba(112,82,190,.13));
+  position:relative;overflow:hidden;
+}
+.route{height:3px;background:linear-gradient(90deg,#ff8fc8,#b99cff,#ff8fc8);margin:30px 10%;position:relative}
+.route:after{content:"✈️";position:absolute;left:48%;top:-18px;animation:fly 3s ease-in-out infinite}
+.places{display:flex;justify-content:space-between;gap:20px}
+.place{font-weight:bold;color:#ffd0e8}
+.reasons{max-width:650px;margin:auto;text-align:left}
+.reasons div{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.final{
+  min-height:90vh; display:flex;align-items:center;justify-content:center;
+  text-align:center; padding:40px 20px;
+  background:linear-gradient(180deg,transparent,rgba(255,75,160,.08));
+}
+.big{font-size:clamp(2rem,7vw,4.5rem);line-height:1.25}
+.signature{color:#ffb5dc;font-size:1.2rem;margin-top:25px}
+.float{position:fixed;bottom:-30px;font-size:22px;pointer-events:none;animation:rise 6s linear forwards;z-index:5}
+@keyframes pulse{50%{transform:scale(1.12)}}
+@keyframes rise{to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
+@keyframes fly{0%,100%{left:8%}50%{left:86%}}
+@media(max-width:600px){.section{padding:42px 18px}.letter{padding:22px}.grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<section id="lockPage" class="page">
+  <div class="card lock">
+    <div class="heart">🔐</div>
+    <div class="stamp">A LITTLE SURPRISE FOR</div>
+    <h1>My Mayaluu ❤️</h1>
+    <p>This page is locked...<br>Only my Mayaluu can open it.</p>
+    <input id="code" type="password" inputmode="numeric" maxlength="4" placeholder="Enter the secret code">
+    <br>
+    <button onclick="unlock()">Unlock My Heart 💗</button>
+    <div id="error" class="error"></div>
+  </div>
+</section>
+
+<main id="site" class="hidden">
+
+<section class="section center">
+  <div class="card" style="padding:45px 25px">
+    <div class="stamp">HAPPY BOYFRIEND'S DAY ♡</div>
+    <h1>Hey, My Mayaluu 🥹❤️</h1>
+    <p>If you're reading this, it means you found your way into my little corner of the internet.</p>
+    <p>You are not just my boyfriend. You are my comfort zone, my safe place, my happiness, my favorite person... and of course, <b>my favorite idiot.</b> 😂❤️</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card section">
+    <div class="letter">
+      <div class="stamp">A LETTER FOR YOU 💌</div>
+      <h2>Happy Boyfriend's Day, my Mayaluu ❤️</h2>
+      <p>Thank you for being there, for making me smile, for listening to my nonsense, and for simply being you.</p>
+      <p>We may be miles apart, but somehow you still feel like home. Distance means so little when someone means so much.</p>
+      <p>I miss your presence, your hugs, your voice, and all the little things we would do if you were here. But until the day we don't have to count the miles anymore, I'll keep choosing you. ❤️</p>
+      <p>I hope you always remember that you're loved, appreciated, and very, very special to me.</p>
+      <p><b>Happy Boyfriend's Day, my idiot, my Mayaluu, my everything. 🫂❤️</b></p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card section">
+    <div class="center">
+      <div class="stamp">THE THINGS YOU ARE TO ME</div>
+      <h2>You Are My... 💗</h2>
+    </div>
+    <div class="grid">
+      <div class="item"><div class="icon">🗺️</div><b>Google Maps</b><span>Because somehow, you always help me find my way.</span></div>
+      <div class="item"><div class="icon">🔔</div><b>Favorite Notification</b><span>Your name on my screen can turn my whole day around.</span></div>
+      <div class="item"><div class="icon">🫂</div><b>My Therapist</b><span>You listen to all my nonsense and somehow make everything feel better.</span></div>
+      <div class="item"><div class="icon">🏡</div><b>My Comfort Zone</b><span>With you, I can just be myself.</span></div>
+      <div class="item"><div class="icon">🌸</div><b>My Happy Place</b><span>Wherever you are, that's where I want to be.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card section">
+    <div class="center">
+      <div class="stamp">LDR BUT STILL US 🌎❤️</div>
+      <h2>Long Distance... But Forever Connected</h2>
+      <p>Different places. Same sky. Same stars. Same dreams. Same us.</p>
+    </div>
+    <div class="map">
+      <div class="places"><span class="place">📍 You</span><span class="place">📍 Me</span></div>
+      <div class="route"></div>
+      <div class="center">No distance can make my heart forget where it belongs. ❤️</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card section">
+    <div class="center">
+      <div class="stamp">A FEW REASONS 💕</div>
+      <h2>Why You Mean So Much</h2>
+    </div>
+    <div class="reasons">
+      <div>♡ You make me smile, even on my worst days.</div>
+      <div>♡ You listen to me, even when I'm talking nonsense.</div>
+      <div>♡ You make me feel safe and understood.</div>
+      <div>♡ You support me and make me feel less alone.</div>
+      <div>♡ You accept me with all my flaws.</div>
+      <div>♡ You make the distance feel a little smaller.</div>
+      <div>♡ You are simply you — and that's enough for me.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card section center">
+    <div class="stamp">OUR LITTLE SOUNDTRACK 🎵</div>
+    <h2>Our Song ❤️</h2>
+    <p>Put our song here when you publish the site. For now, imagine it playing while you read this. 🥹</p>
+    <div style="font-size:55px">🎧💗🎶</div>
+    <p><i>“Distance means nothing when someone means everything.”</i></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card section">
+    <div class="center">
+      <div class="stamp">WHY I LOVE YOU ❤️</div>
+      <h2>All The Little Things</h2>
+    </div>
+    <div class="reasons">
+      <div>♡ You always make me feel special, even through the distance.</div>
+      <div>♡ You always make me smile, even when I'm not feeling okay.</div>
+      <div>♡ You patiently wait for me whenever I'm busy, without making me feel guilty.</div>
+      <div>♡ You genuinely care about me and always make sure I'm okay.</div>
+      <div>♡ You notice even the smallest little things about me.</div>
+      <div>♡ Even in our LDR, you somehow know when I'm sad or when I'm not feeling well.</div>
+      <div>♡ You make edits just to make me happy, and those little efforts mean so much to me.</div>
+      <div>♡ You take away my tension and try to make me feel better, even when you're dealing with your own problems.</div>
+      <div>♡ You always put effort into making me happy.</div>
+      <div>♡ You take screenshots of me during our calls and record my silly little moments, even the ones I think are totally cringe. 😂❤️</div>
+      <div>♡ You keep those little moments because you love seeing me exactly as I am.</div>
+      <div>♡ You make me feel like even my weirdest, silliest, most embarrassing moments are worth keeping. 🥹</div>
+      <div>♡ You love me so much, and I can feel it in all the little things you do.</div>
+      <div>♡ Most of all, you make me feel loved, understood, cared for, and special. ❤️</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card section">
+    <div class="center">
+      <div class="stamp">A HEARTFELT CLOSING 💌</div>
+      <h2>One More Thing...</h2>
+    </div>
+    <div class="letter">
+      <p>And after all these little things you do for me, I just want you to know something…</p>
+      <p>I notice your efforts. I notice the way you care for me, the way you wait for me, the way you remember the tiniest things, and the way you always try to make me smile. ❤️</p>
+      <p>Even though we are miles apart, you somehow manage to make me feel loved and close to you. You make the distance feel a little less difficult.</p>
+      <p>Thank you for loving me in your own beautiful way. Thank you for staying, for understanding me, for making me laugh, for keeping my silly moments, and for being my safe place even from far away.</p>
+      <p>I don't need everything to be perfect. I just want <b>you</b>—with all your love, your craziness, your patience, and your silly little ways. 🥹❤️</p>
+      <p><b>So, my Mayaluu…</b></p>
+      <p><b>Happy Boyfriend's Day, my idiot. 🫂❤️</b><br>
+      You are my favorite notification, my comfort zone, my happy place, and the person I want to keep choosing, again and again.</p>
+      <p><b>Distance may keep us apart for now, but it will never change how much you mean to me.</b></p>
+      <p>I love you more than these words could ever explain. ❤️</p>
+      <p class="signature">Always yours,<br>Your girl. 💗</p>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div>
+    <div class="stamp">AND FINALLY...</div>
+    <div class="big">My comfort zone.<br>My idiot.<br>My everything. ❤️</div>
+    <p>Happy Boyfriend's Day, my Mayaluu. 🥹</p>
+    <div class="signature">Thank you for being you.<br>I love you. Always. ♡</div>
+  </div>
+</section>
+
+</main>
+
+<script>
+function unlock(){
+  const input=document.getElementById("code");
+  const error=document.getElementById("error");
+  if(input.value==="2110"){
+    document.getElementById("lockPage").classList.add("hidden");
+    document.getElementById("site").classList.remove("hidden");
+    window.scrollTo(0,0);
+    reveal();
+    hearts();
+  }else{
+    error.textContent="Hmm... that's not the secret code. Try again, my idiot 😭❤️";
+    input.value="";
+  }
+}
+document.getElementById("code").addEventListener("keydown",e=>{if(e.key==="Enter")unlock()});
+
+function reveal(){
+  document.querySelectorAll(".item").forEach((el,i)=>{
+    setTimeout(()=>el.classList.add("show"),i*180);
+  });
+}
+function hearts(){
+  setInterval(()=>{
+    const h=document.createElement("div");
+    h.className="float";
+    h.textContent=["❤️","💗","💕","✨","♡"][Math.floor(Math.random()*5)];
+    h.style.left=Math.random()*100+"vw";
+    h.style.animationDuration=(4+Math.random()*4)+"s";
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),8000);
+  },650);
+}
+</script>
+</body>
+</html>
